@@ -3,11 +3,11 @@ class HeroesController < ApplicationController
 rescue_from ActiveRecord::RecordNotFound, with: :render_not_found_response
     def index
         heroes = Hero.all
-        render json: heroes, except: [:created_at, :updated_at]
+        render json: heroes, status: :ok
     end
     def show 
         hero = Hero.find(params[:id])
-        render json: hero, include: [:powers]
+        render json: hero, serializer: HeroPowerSerializer
     end
 
     # private
