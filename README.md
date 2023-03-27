@@ -46,6 +46,8 @@ rails s
 http://localhost:3000
 
 ```
+### Deployment link
+https://superheroes-8lnf.onrender.com
 
 ### Validations
 Add validations to the `HeroPower` model:
