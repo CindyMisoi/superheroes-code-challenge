@@ -4,12 +4,12 @@ POWERS = ["Energy blasts", "martial artist", "speed", "healing", "stamina", "agi
 STRENGTH = ['Strong', 'Weak', 'Average']
 # heroes
 6.times do
-    Hero.create(name: HEROES.uniq.sample)
+    Hero.create(name: Faker::Internet.username, super_name: HEROES.uniq.sample)
 end
 
 # powers
 6.times do
-   Power.create(name: POWERS.uniq.sample(2), description: Faker::Lorem.sentence)
+   Power.create(name: POWERS.uniq.sample, description: Faker::Lorem.sentence)
 end
 
 # heropowers 
