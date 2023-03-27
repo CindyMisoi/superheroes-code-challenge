@@ -2,7 +2,7 @@ puts "start seeding..."
 HEROES = ["Captain America", "Black Panther", "Groot", "Hawkeye","Black Widow", "The Winter Soldier"]
 POWERS = ["Energy blasts", "martial artist", "speed", "healing", "stamina", "agility"]
 STRENGTH = ['Strong', 'Weak', 'Average']
-# heroes
+# # heroes
 6.times do
     Hero.create(name: Faker::Internet.username, super_name: HEROES.uniq.sample)
 end

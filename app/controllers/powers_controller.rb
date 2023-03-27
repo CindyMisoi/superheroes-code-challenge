@@ -24,7 +24,7 @@ rescue_from ActiveRecord::RecordInvalid, with: :render_unprocessable_entity_resp
     # private
     private
     def render_not_found_response
-        render json: {error:"Power not found"}, statu: :not_found
+        render json: {error:"Power not found"}, status: :not_found
     end
     # validation error
     def render_unprocessable_entity_response
